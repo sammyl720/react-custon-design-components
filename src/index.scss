@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+@for $i from 1 through 5 {
+  .m-#{$i} { margin: ($i / 2)rem; }
+  .my-#{$i} { 
+    margin-top: ($i / 2)rem; 
+    margin-bottom: ($i / 2)rem; 
+  }
+  .mx-#{$i} { 
+    margin-left: ($i / 2)rem; 
+    margin-right: ($i / 2)rem; 
+  }
+  .mr-#{$i} { 
+    margin-right: ($i / 2)rem; 
+  }
+  .ml-#{$i} { 
+    margin-left: ($i / 2)rem; 
+  }
+
+  .p-#{$i} { padding: ($i / 2)rem; }
+  .py-#{$i} { 
+    padding-top: ($i / 2)rem; 
+    padding-bottom: ($i / 2)rem; 
+  }
+  .px-#{$i} { 
+    padding-left: ($i / 2)rem; 
+    padding-right: ($i / 2)rem; 
+  }
+  .pr-#{$i} { 
+    padding-right: ($i / 2)rem; 
+  }
+  .pl-#{$i} { 
+    padding-left: ($i / 2)rem; 
+  }
+}

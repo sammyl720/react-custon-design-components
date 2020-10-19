@@ -15,16 +15,7 @@ interface GridProps{
  *  gap: Gap Size (sm, md, lg, lg)
  */
 const Grid:React.FC<GridProps> = ({ children, rows, cols, gap}) => {
-  const [width, setWidth] = useState(window.innerWidth)
-  const resize = () => {
-    setWidth(window.innerWidth)
-  }
-  useEffect(() => {
-    window.onresize = resize
-  }, [])
-  useEffect(() => {
-    console.log(width)
-  }, [width])
+  
   return (
     <div
       className={`${classes.grid} ${gap ? classes[gap] : classes['lg']} ${rows ? classes['rows' + rows] : 'rows-12'} ${cols ? classes['cols' + cols] : 'cols-12'}`}>

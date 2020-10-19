@@ -9,7 +9,7 @@ import GridItem from './components/Grid/GridItem/GridItem';
 import CardFooter from './components/Card/CardFooter/CardFooter';
 function App() {
   return (
-    <Container>
+    <Container addClasses='m-1 p-1'>
 
       <Grid rows='12' cols='10' gap='sm'>
         <GridItem rowStart={2} rowEnd={7} colStart={1} colEnd={7}>

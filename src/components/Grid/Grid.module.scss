@@ -4,6 +4,7 @@
   height: 100%;
 }
 
+$sizes: ('sm': .5rem, 'md': 1rem, 'lg': 1.5rem, 'xl': 2rem);
 @for $i from 1 through 24 {
   .grid.rows#{$i} {
     grid-template-rows: repeat($i, 1fr);
@@ -13,7 +14,11 @@
   }
 }
 
-$sizes: ('sm': .5rem, 'md': 1rem, 'lg': 1.5rem, 'xl': 2rem);
+@media screen and(max-width:800px) {
+  .grid {
+    grid-template-rows: repeat( 5, minmax(auto, 1fr) ) !important;
+  }
+}
 
 @each $name, $size in $sizes {
   .grid.#{$name} {
