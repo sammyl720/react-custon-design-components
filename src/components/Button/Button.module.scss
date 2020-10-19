@@ -2,11 +2,15 @@
 .btn {
   display: inline-block;
   border: 2px solid black;
-  margin: 0 .5rem; 
+  margin: 1rem auto; 
   color:white;
   border-radius: 5px;
   cursor: pointer;
   transition: 200ms;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .btn.sm {
@@ -20,6 +24,10 @@
 .btn.lg {
   padding: 10px 20px;
   font-size: 20px;
+}
+.btn.xl {
+  padding: 12px 24px;
+  font-size: 24px;
 }
 
 .btn.primary {

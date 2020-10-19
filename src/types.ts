@@ -4,5 +4,5 @@ type Theme = {
 };
 
 type color = 'primary' | 'secondary'| 'success' | 'warning' | 'danger'
-type size = 'sm' | 'md' | 'lg'
+type size = 'sm' | 'md' | 'lg' | 'xl'
 export type { Theme, color, size }
