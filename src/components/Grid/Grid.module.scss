@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  
+}
+
+@for $i from 1 through 12 {
+  .grid.rows#{$i} {
+    grid-template-rows: repeat($i, minmax(50px, auto));
+  }
+  .grid.cols#{$i} {
+    grid-template-columns: repeat($i, minmax(50px, auto));
+  }
+}
+
+$sizes: ('sm': .5rem, 'md': 1rem, 'lg': 1.5rem, 'xl': 2rem);
+
+@each $name, $size in $sizes {
+  .grid.#{$name} {
+    gap: $size;
+  }
+}
