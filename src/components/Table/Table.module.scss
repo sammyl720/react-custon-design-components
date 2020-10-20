@@ -1,0 +1,18 @@
+@import '../../sass/colors';
+.table{
+  // border-collapse: separate;
+  border: 1px solid #070c5923;
+  padding: 1rem;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.24),
+  3px 3px 15px rgba(0, 0, 0, 0.288);
+}
+
+th, td {
+  padding: 4px;
+}
+th{
+  font-weight: 400;
+}
+tr:nth-child(odd){
+  background-color: #03052013;
+}
