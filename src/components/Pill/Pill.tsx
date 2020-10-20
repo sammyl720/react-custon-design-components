@@ -1,4 +1,4 @@
-import React, { RefObject, useRef } from 'react'
+import React, { useRef } from 'react'
 import { color } from '../../types'
 import classes from './Pill.module.scss';
 type PillProps = {
