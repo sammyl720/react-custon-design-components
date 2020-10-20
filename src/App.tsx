@@ -1,39 +1,53 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './components/Card/Card';
 import Container from './components/container/Container'
+import axios from 'axios'
+import { Child, Welcome } from './Reddit';
+import Grid from './components/Grid/Grid';
 import FlexBox from './components/FlexBox/FlexBox';
-import Modal from './components/Modal/Modal';
+import CardFooter from './components/Card/CardFooter/CardFooter';
 import Pill from './components/Pill/Pill';
 function App() {
-  const modalRef = React.createRef<HTMLDivElement>()
-  useEffect(() => {
-    modalRef.current!.style.display = 'none'
-  }, [modalRef])
+  
   return (
-    <Container addClasses='m-1 p-1'>
-      <Modal ref={modalRef}>
-        <Card>
-        <h1>This is a Modal</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-           Qui sapiente magni quia deleniti dicta nulla repellendus 
-           atque hic eaque asperiores accusamus nihil perferendis laudantium,
-          id sequi corrupti dolor quam perspiciatis.</p>
-        </Card>
-      </Modal>
-      <FlexBox 
-        direction='row'
-        alignItems='alignCenter' 
-        justifyContent='justifyCenter'
-      >
-        <h1 onClick={() => {
-          modalRef.current!.style.display = 'block'
-        }} style={{ fontWeight: 300, fontSize: 72 }}>Hello World!</h1>
-        <Pill color='primary'>Water</Pill>
-        <Pill color='secondary'>Soda</Pill>
-        <Pill color='warning'>Gatorade</Pill>
-        <Pill color='danger'>Powerade</Pill>
-      </FlexBox>
-    </Container>
+    <div style={{width:'100%', height: '100%'}}>
+        <Container fluid addClasses='primary'>
+          <FlexBox direction='row' alignItems='alignCenter' justifyContent='justifyCenter'>
+              <h1 style={{ fontSize: 72, fontWeight: 200 }}>Hello World!</h1>
+              <Pill color='classic'>Primary</Pill>
+          </FlexBox>
+        </Container>
+          <Container fluid addClasses='success'>
+          <FlexBox direction='row' alignItems='alignCenter' justifyContent='justifyCenter'>
+              <h1 style={{ fontSize: 72, fontWeight: 200 }}>Hello World!</h1>
+              <Pill color='primary'>success</Pill>
+          </FlexBox>
+        </Container>
+          <Container fluid addClasses='classic'>
+          <FlexBox direction='row' alignItems='alignCenter' justifyContent='justifyCenter'>
+              <h1 style={{ fontSize: 72, fontWeight: 200 }}>Hello World!</h1>
+              <Pill color='secondary'>Classic</Pill>
+          </FlexBox>
+        </Container>
+        <Container fluid addClasses='secondary'>
+          <FlexBox direction='row' alignItems='alignCenter' justifyContent='justifyCenter'>
+              <h1 style={{ fontSize: 72, fontWeight: 200 }}>Hello World!</h1>
+              <Pill color='classic'>Secondary</Pill>
+          </FlexBox>
+        </Container>
+        <Container fluid addClasses='warning'>
+          <FlexBox direction='row' alignItems='alignCenter' justifyContent='justifyCenter'>
+              <h1 style={{ fontSize: 72, fontWeight: 200 }}>Hello World!</h1>
+              <Pill color='danger'>Warning</Pill>
+          </FlexBox>
+        </Container>
+          <Container fluid addClasses='danger'>
+          <FlexBox direction='row' alignItems='alignCenter' justifyContent='justifyCenter'>
+              <h1 style={{ fontSize: 72, fontWeight: 200 }}>Hello World!</h1>
+              <Pill color='warning'>Danger</Pill>
+          </FlexBox>
+        </Container>
+    </div>
   );
 }
 
