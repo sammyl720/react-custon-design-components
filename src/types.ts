@@ -3,6 +3,6 @@ type Theme = {
   size?: size
 };
 
-type color = 'primary' | 'secondary'| 'success' | 'warning' | 'danger' | 'classic'
+type color = 'primary' | 'secondary'| 'success' | 'warning' | 'light' | 'danger' | 'classic'
 type size = 'sm' | 'md' | 'lg' | 'xl'
 export type { Theme, color, size }

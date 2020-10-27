@@ -5,13 +5,17 @@
   padding: 1rem;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.24),
   3px 3px 15px rgba(0, 0, 0, 0.288);
+  width: 100%;
 }
 
 th, td {
-  padding: 4px;
+  padding: 1rem;
+}
+tr td:hover{
+  font-weight: 600;
 }
 th{
-  font-weight: 400;
+  font-weight: 800;
 }
 tr:nth-child(odd){
   background-color: #03052013;
