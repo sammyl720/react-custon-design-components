@@ -76,6 +76,11 @@ a:hover::after, *.hyperlink:hover::after {
   }
 }
 
+@media(max-width: 720px) {
+   * > .flex-control{
+    display: flex;
+  }
+}
 @keyframes expand {
   from {
     width: 0%;

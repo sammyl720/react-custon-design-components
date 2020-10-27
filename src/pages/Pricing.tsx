@@ -14,9 +14,11 @@ const Pricing = () => {
         <Grid rows='5' cols='12' gap='sm'>
           <GridItem rowStart={1} rowEnd={7} colStart={0} colEnd={1} addClass='slideInFromLeft-800 primary' >
             <Card addClasses='p-4'>
-              <h3 className="hyperlink my-2">Group Packages</h3>
-              <h3 className="hyperlink my-2">Business Package</h3>
-              <h3 className="hyperlink my-2">Party Package</h3>
+              <div className="flex-control">
+                <h3 className="hyperlink my-2">Group Packages</h3>
+                <h3 className="hyperlink my-2">Business Package</h3>
+                <h3 className="hyperlink my-2">Party Package</h3>
+              </div>
             </Card>
           </GridItem>
           <GridItem rowStart={1} rowEnd={7} colStart={2} colEnd={13} addClass='slideInFromRight-800'>

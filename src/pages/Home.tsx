@@ -7,12 +7,32 @@ import Grid from '../components/Grid/Grid'
 import GridItem from '../components/Grid/GridItem/GridItem'
 import Hero from '../components/Hero/Hero'
 import { Link } from 'react-router-dom'
+import Avatar from '../components/Avatar/Avatar'
 const Home = () => {
   return (
-    <Container addClasses='py-2'>
+    <Container>
       <Hero title='The Best In Catering' subText='Edam fondue mozzarella. Cheese slices cheese and wine chalk and cheese squirty cheese smelly cheese camembert de normandie emmental st. agur blue cheese.' imageUrl='imgs/meal1.png'>
         <Button color='primary' size='xl'><Link to='/pricing'>Menu <i className="fas fa-book-open" style={{ marginLeft: '16px'}}></i></Link></Button>
       </Hero>
+      <div style={{ backgroundColor: '#4e3cf625', height: '5px' }} className='my-2' />
+      <Grid cols='2' >
+        <GridItem colStart={1} colEnd={2} rowStart={1} rowEnd={2}>
+        <Card addClasses='p-2'>
+            <Avatar addClasses='my-2' imgUrl='imgs/avatars/avatar5.jpg' size='lg' />
+            <h3>5 Michaelin Stars</h3>
+            <p style={{ textAlign: 'center'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, excepturi!</p>
+          </Card>
+        </GridItem>
+        <GridItem colStart={2} colEnd={3} rowStart={1} rowEnd={2}>
+          <Card addClasses='p-2'>
+            <FlexBox direction='column' justifyContent='justifyEvenly' alignItems='alignCenter'>
+            <Avatar addClasses='my-2' imgUrl='imgs/avatars/avatar2.png' size='lg' />
+            <h3>Professional Standards</h3>
+            <p style={{ textAlign: 'center'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, excepturi!</p>
+            </FlexBox>
+          </Card>
+        </GridItem>
+      </Grid>
     </Container>
   )
 }
