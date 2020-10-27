@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from '../components/Card/Card'
 import Container from '../components/container/Container'
-import FlexBox from '../components/FlexBox/FlexBox'
 import Grid from '../components/Grid/Grid'
 import GridItem from '../components/Grid/GridItem/GridItem'
 import Table from '../components/Table/Table'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import classes from './GridItem.module.scss'
 
 type ItemProps = {
@@ -10,7 +10,6 @@ type ItemProps = {
 }
 const GridItem:React.FC<ItemProps> = (props) => {
   const { rowStart, colStart, rowEnd, colEnd, addClass } = props
-  const [width, setWidth] = useState(window.innerWidth)
   
   return (
     <div className={`${classes.gridItem}

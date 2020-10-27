@@ -1,7 +1,6 @@
-import React, {useEffect, useState } from 'react';
+import React from 'react';
 import Container from './components/container/Container'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { dataType, fetchUsers } from './api/users'
 import AppBar from './components/AppBar/AppBar';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
@@ -17,10 +16,6 @@ const List= () =>  {
   )
 }
 function App() {
-  const [data, setData] = useState<dataType | null>(null)
-  useEffect(() => {
-    fetchUsers(setData)
-  }, [])
   return (
     <Router>
       <Container fluid>

@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, Children } from 'react'
-import Button from '../Button/Button'
+import React from 'react'
 import classes from './Hero.module.scss'
 type heroProps = {
   /**
