@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../components/Card/Card'
 import Container from '../components/container/Container'
+import FlexBox from '../components/FlexBox/FlexBox'
 import Grid from '../components/Grid/Grid'
 import GridItem from '../components/Grid/GridItem/GridItem'
 import Table from '../components/Table/Table'
@@ -11,16 +12,16 @@ const Pricing = () => {
       <h3 className='my-4 slideInFromTop-800' style={{ textAlign: 'center', fontSize: '32px', lineHeight: '34px', fontWeight: 300}}>Our Pricing</h3>
 
         <Grid rows='5' cols='12' gap='sm'>
-          <GridItem rowStart={1} rowEnd={7} colStart={0} colEnd={1} addClass='slideInFromLeft-800 primary' >
-            <Card addClasses='p-4'>
-              <div className="flex-control">
-                <h3 className="hyperlink my-2">Group Packages</h3>
-                <h3 className="hyperlink my-2">Business Package</h3>
-                <h3 className="hyperlink my-2">Party Package</h3>
-              </div>
+          <GridItem rowStart={1} rowEnd={2} colStart={3} colEnd={11} addClass='slideInFromLeft-800 primary' >
+            <Card addClasses='p-1' >
+              <FlexBox direction={'row'} alignItems='alignCenter' justifyContent='justifyEvenly'>
+                <h3 className="hyperlink m-2">Group Packages</h3>
+                <h3 className="hyperlink m-2">Business Package</h3>
+                <h3 className="hyperlink m-2">Party Package</h3>
+              </FlexBox >
             </Card>
           </GridItem>
-          <GridItem rowStart={1} rowEnd={7} colStart={2} colEnd={13} addClass='slideInFromRight-800'>
+          <GridItem rowStart={3} rowEnd={7} colStart={1} colEnd={13} addClass='slideInFromRight-800'>
             <Table headers={['Name', 'Details', 'Price']} data={[
               {
                 name: 'The Starter Package',

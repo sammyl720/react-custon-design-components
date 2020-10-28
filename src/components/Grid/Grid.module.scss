@@ -19,7 +19,8 @@ $sizes: ('sm': .5rem, 'md': 1rem, 'lg': 1.5rem, 'xl': 2rem);
   div.grid {
     grid-auto-rows: minmax(200px, auto-fill);
     // grid-template-rows: repeat(100, minmax(200px, auto)) !important;
-    grid-template-columns: 1fr !important;
+    grid-auto-columns: 1fr !important;
+
   }
 }
 @media screen and(max-width:1000px) {

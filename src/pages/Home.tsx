@@ -8,6 +8,7 @@ import GridItem from '../components/Grid/GridItem/GridItem'
 import Hero from '../components/Hero/Hero'
 import { Link } from 'react-router-dom'
 import Avatar from '../components/Avatar/Avatar'
+import Parralax from '../components/Parralax/Parralax'
 const Home = () => {
   return (
     <Container>
@@ -33,6 +34,13 @@ const Home = () => {
           </Card>
         </GridItem>
       </Grid>
+      <Parralax imageUrl='./imgs/bo-leaf.png' width='100%' height='800px' addClasses='my-4'>
+        <FlexBox direction='column' alignItems='alignCenter' justifyContent='justifyCenter' >
+          <Card color='light' addClasses='p-1'>
+            <h4 style={{ color: 'black', fontSize: '32px', fontWeight: 200 }}>Where The Magic Happens</h4>
+          </Card>
+        </FlexBox>
+      </Parralax>
     </Container>
   )
 }
