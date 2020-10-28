@@ -21,20 +21,20 @@ const Home = () => {
         <Card addClasses='p-2'>
             <Avatar addClasses='my-2' imgUrl='imgs/avatars/avatar5.jpg' size='lg' />
             <h3>5 Michaelin Stars</h3>
-            <p style={{ textAlign: 'center'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, excepturi!</p>
+            <p style={{ textAlign: 'center', width: '50%'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, excepturi!</p>
           </Card>
         </GridItem>
         <GridItem colStart={2} colEnd={3} rowStart={1} rowEnd={2}>
-          <Card addClasses='p-2'>
+          <Card addClasses='p-1'>
             <FlexBox direction='column' justifyContent='justifyEvenly' alignItems='alignCenter'>
             <Avatar addClasses='my-2' imgUrl='imgs/avatars/avatar2.png' size='lg' />
             <h3>Professional Standards</h3>
-            <p style={{ textAlign: 'center'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, excepturi!</p>
+            <p style={{ textAlign: 'center', width: '50%' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, excepturi!</p>
             </FlexBox>
           </Card>
         </GridItem>
       </Grid>
-      <Parralax imageUrl='./imgs/bo-leaf.png' width='100%' height='800px' addClasses='my-4'>
+      <Parralax imageUrl='./imgs/bo-leaf.png' width='100%' height='800px' addClasses=''>
         <FlexBox direction='column' alignItems='alignCenter' justifyContent='justifyCenter' >
           <Card color='light' addClasses='p-1'>
             <h4 style={{ color: 'black', fontSize: '32px', fontWeight: 200 }}>Where The Magic Happens</h4>

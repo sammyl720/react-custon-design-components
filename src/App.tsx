@@ -5,6 +5,7 @@ import AppBar from './components/AppBar/AppBar';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
+import FlexBox from './components/FlexBox/FlexBox';
 
 const List= () =>  {
   return (
@@ -25,6 +26,14 @@ function App() {
           <Route path='/pricing' component={Pricing} />
           <Route path='/about' component={About} />
         </Switch>
+        <FlexBox alignItems='alignCenter' justifyContent='justifyBetween' direction='row' addClasses='px-4 py-2 primary'>
+          <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>&copy; C&amp;Co 2020</span>
+          <div>
+            <i style={{ margin: '0 5px', cursor: 'pointer'}} className="fab fa-facebook fa-2x"></i>
+            <i style={{ margin: '0 5px', cursor: 'pointer'}} className="fab fa-instagram fa-2x"></i>
+            <i style={{ margin: '0 5px', cursor: 'pointer'}} className="fab fa-twitter fa-2x"></i>
+          </div>
+        </FlexBox>
       </Container>
     </Router>
   );

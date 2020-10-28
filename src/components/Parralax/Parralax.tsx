@@ -11,7 +11,7 @@ const Parralax:React.FC<ParaProps> = ({ imageUrl, addClasses, width, height, chi
   const divRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     divRef.current!.style.backgroundImage = `url('${imageUrl}')`
-  }, [])
+  }, [imageUrl])
   return (
     <div ref={divRef} className={`${classes.parralax} ${addClasses || ''}`} style={{ width, height}}>
       {children}
